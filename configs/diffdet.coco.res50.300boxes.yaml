@@ -1,0 +1,25 @@
+_BASE_: "Base-DiffusionDet.yaml"
+MODEL:
+
+ WEIGHTS: "/root/autodl-tmp/project/DiffusionDet-main/output_bbox500_CPDCfusionp5_scale1.0/model_final.pth"
+  RESNETS:
+    DEPTH: 50
+    STRIDE_IN_1X1: False
+  DiffusionDet:
+    NUM_PROPOSALS: 500
+    NUM_CLASSES: 7
+#    NUM_CLASSES: 80
+DATASETS:
+  TRAIN: ("coco_2017_train",)
+  TEST:  ("coco_2017_val",)
+SOLVER:
+#  STEPS: (350000, 420000)
+#  MAX_ITER: 450000
+  GAMMA: 0.05
+  STEPS: (2000, 3999)
+  MAX_ITER: 5000
+INPUT:
+  CROP:
+    ENABLED: False
+#    ENABLED: True
+  FORMAT: "RGB"
