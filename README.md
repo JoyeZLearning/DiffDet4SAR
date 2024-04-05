@@ -5,7 +5,7 @@
 
 
 
-> [**DiffDet4SAR: Diffusion-based Aircraft Target Detection Network for SAR Images**](https://arxiv.org/abs/2211.09788)               
+> [**DiffDet4SAR: Diffusion-based Aircraft Target Detection Network for SAR Images**](https://arxiv.org/abs/2404.03595)               
 
 
 ## Updates
@@ -33,5 +33,12 @@ This project is under the CC-BY-NC 4.0 license. See [LICENSE](LICENSE) for detai
 If you use DiffDet4SAR in your research or wish to refer to the baseline results published here, please use the following BibTeX entry.
 
 ```BibTeX
-
+@misc{jie2024diffdet4sar,
+      title={DiffDet4SAR: Diffusion-based Aircraft Target Detection Network for SAR Images}, 
+      author={Zhou Jie and Xiao Chao and Peng Bo and Liu Zhen and Liu Li and Liu Yongxiang and Li Xiang},
+      year={2024},
+      eprint={2404.03595},
+      archivePrefix={arXiv},
+      primaryClass={eess.IV}
+}
 ```
