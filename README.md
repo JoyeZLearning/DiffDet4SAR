@@ -11,10 +11,8 @@
 ## Updates
 - (04/2024) Code is released.
 
-## Models
-Method | Box AP (1 step) | Box AP (4 step) | Download
---- |:---:|:---:|:---:
-[COCO-Res50](configs/diffdet.coco.res50.yaml) | 45.5 | 46.1 | [model](https://github.com/ShoufaChen/DiffusionDet/releases/download/v0.1/diffdet_coco_res50.pth)
+## Dataset
+SAR-AIRcraft1.0 (doi: 10.12000/JR23043)
 
 
 
