@@ -1,4 +1,4 @@
-## Getting Started with DiffusionDet
+## Getting Started with DiffDet4SAR
 
 
 
@@ -19,46 +19,33 @@ Thanks very much.
 2. Prepare datasets
 ```
 mkdir -p datasets/coco
-mkdir -p datasets/lvis
+
 
 ln -s /path_to_coco_dataset/annotations datasets/coco/annotations
 ln -s /path_to_coco_dataset/train2017 datasets/coco/train2017
 ln -s /path_to_coco_dataset/val2017 datasets/coco/val2017
 
-ln -s /path_to_lvis_dataset/lvis_v1_train.json datasets/lvis/lvis_v1_train.json
-ln -s /path_to_lvis_dataset/lvis_v1_val.json datasets/lvis/lvis_v1_val.json
 ```
 
 3. Prepare pretrain models
 
-DiffusionDet uses three backbones including ResNet-50, ResNet-101 and Swin-Base. The pretrained ResNet-50 model can be
-downloaded automatically by Detectron2. We also provide pretrained
-[ResNet-101](https://github.com/ShoufaChen/DiffusionDet/releases/download/v0.1/torchvision-R-101.pkl) and
-[Swin-Base](https://github.com/ShoufaChen/DiffusionDet/releases/download/v0.1/swin_base_patch4_window7_224_22k.pkl) which are compatible with
-Detectron2. Please download them to `DiffusionDet_ROOT/models/` before training:
+DiffDet uses three backbones  ResNet-50 The pretrained ResNet-50 model can be
+downloaded automatically by Detectron2. 
 
 ```bash
 mkdir models
 cd models
-# ResNet-101
-wget https://github.com/ShoufaChen/DiffusionDet/releases/download/v0.1/torchvision-R-101.pkl
-
-# Swin-Base
-wget https://github.com/ShoufaChen/DiffusionDet/releases/download/v0.1/swin_base_patch4_window7_224_22k.pkl
 
 cd ..
 ```
 
-Thanks for model conversion scripts of [ResNet-101](https://github.com/PeizeSun/SparseR-CNN/blob/main/tools/convert-torchvision-to-d2.py)
-and [Swin-Base](https://github.com/facebookresearch/Detic/blob/main/tools/convert-thirdparty-pretrained-model-to-d2.py).
-
-4. Train DiffusionDet
+4. Train DiffDet4SAR
 ```
 python train_net.py --num-gpus 8 \
     --config-file configs/diffdet.coco.res50.yaml
 ```
 
-5. Evaluate DiffusionDet
+5. Evaluate DiffDet4SAR
 ```
 python train_net.py --num-gpus 8 \
     --config-file configs/diffdet.coco.res50.yaml \
@@ -69,12 +56,8 @@ python train_net.py --num-gpus 8 \
 * Evaluate with 4 refinement steps by setting `MODEL.DiffusionDet.SAMPLE_STEP 4`.
 
 
-We also provide the [pretrained model](https://github.com/ShoufaChen/DiffusionDet/releases/download/v0.1/diffdet_coco_res50_300boxes.pth)
-of [DiffusionDet-300boxes](configs/diffdet.coco.res50.300boxes.yaml) that is used for ablation study.
-
 
 ### Inference Demo with Pre-trained Models
-We provide a command line tool to run a simple demo following [Detectron2](https://github.com/facebookresearch/detectron2/tree/main/demo#detectron2-demo).
 
 ```bash
 python demo.py --config-file configs/diffdet.coco.res50.yaml \
