@@ -26,7 +26,7 @@ The installation instruction and usage are in [Getting Started with DiffusionDet
 This project is under the CC-BY-NC 4.0 license. See [LICENSE](LICENSE) for details.
 
 
-## Citing DiffusionDet
+## Citing DiffDet4SAR
 
 If you use DiffDet4SAR in your research or wish to refer to the baseline results published here, please use the following BibTeX entry.
 
