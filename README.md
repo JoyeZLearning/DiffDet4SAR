@@ -31,12 +31,15 @@ This project is under the CC-BY-NC 4.0 license. See [LICENSE](LICENSE) for detai
 If you use DiffDet4SAR in your research or wish to refer to the baseline results published here, please use the following BibTeX entry.
 
 ```BibTeX
-@misc{jie2024diffdet4sar,
-      title={DiffDet4SAR: Diffusion-based Aircraft Target Detection Network for SAR Images}, 
-      author={Zhou Jie and Xiao Chao and Peng Bo and Liu Zhen and Liu Li and Liu Yongxiang and Li Xiang},
-      year={2024},
-      eprint={2404.03595},
-      archivePrefix={arXiv},
-      primaryClass={eess.IV}
-}
+@ARTICLE{10494361,
+  author={Zhou, Jie and Xiao, Chao and Peng, Bo and Liu, Zhen and Liu, Li and Liu, Yongxiang and Li, Xiang},
+  journal={IEEE Geoscience and Remote Sensing Letters}, 
+  title={DiffDet4SAR: Diffusion-Based Aircraft Target Detection Network for SAR Images}, 
+  year={2024},
+  volume={21},
+  number={},
+  pages={1-5},
+  keywords={Aircraft;Object detection;Radar polarimetry;Feature extraction;Scattering;Noise;Convolution;Aircraft target detection;diffusion model;synthetic aperture radar (SAR)},
+  doi={10.1109/LGRS.2024.3386020}}
+
 ```
