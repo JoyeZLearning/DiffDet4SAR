@@ -1,4 +1,4 @@
-![image](https://github.com/JoyeZLearning/DiffDet4SAR/assets/164322321/9439c2eb-827d-459b-ad4b-6fd186d73d05)## DiffDet4SAR: Diffusion-based Aircraft Target Detection Network for SAR Images
+## DiffDet4SAR: Diffusion-based Aircraft Target Detection Network for SAR Images
 
 **DiffDet4SAR is the first work of diffusion model for SAR image aircraft target detection.**
 
