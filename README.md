@@ -1,4 +1,4 @@
-## DiffDet4SAR: Diffusion-based Aircraft Target Detection Network for SAR Images
+![image](https://github.com/JoyeZLearning/DiffDet4SAR/assets/164322321/9439c2eb-827d-459b-ad4b-6fd186d73d05)## DiffDet4SAR: Diffusion-based Aircraft Target Detection Network for SAR Images
 
 **DiffDet4SAR is the first work of diffusion model for SAR image aircraft target detection.**
 
@@ -20,12 +20,19 @@ SAR-AIRcraft1.0 (doi: 10.12000/JR23043)
 
 The installation instruction and usage are in [Getting Started with DiffusionDet](GETTING_STARTED.md).
 
-## Train:
-1. modeifying the weight in DiffusionDet-main/configs/Base-DiffusionDet.yaml (use pre-train res50)
-2.  modeifying the weight in DiffusionDet-main/configs/diffdet.coco.res50.300boxes.yaml (can also ues pre-train res50, for at presen)
+## Train/Evalution:
+1. modifying the weight in DiffusionDet-main/configs/Base-DiffusionDet.yaml (use pre-train res50)
+2.  modifying the weight in DiffusionDet-main/configs/diffdet.coco.res50.300boxes.yaml
+3.  modifying  DiffusionDet-main/detectron2/engine/defaults.py  and the 98-122 line to your root.
+4.  As for other configs and their meaning,  [DifffusionDet](https://github.com/ShoufaChen/DiffusionDet) is introduced in detail.
+5.  ATTENTION：In order to use the code directly and reduce the complexity of the code, I changed the images and annotations of the aircraft dataset into the coco format, and put them in the folder named coco.
+6.  ![image](https://github.com/JoyeZLearning/DiffDet4SAR/assets/164322321/8ea8c3f3-d17c-453d-832a-b906dd5e4003)
+
+
+
 
 ## Quantative Results:
-Quantitative results of different models evaluated by AP@50. The model weights are available at  You can down load the model weights and put it to the checkpoints folder and modify the weight in DiffusionDet-main/configs/diffdet.coco.res50.300boxes.yaml
+Quantitative results of different models evaluated by AP@50. The model weights are available at(I will upload the weight later for it is now uploaded to BAIDU YUN)  You can down load the model weights and put it to the checkpoints folder and modify the weight in DiffusionDet-main/configs/diffdet.coco.res50.300boxes.yaml
 
 
 *The overall repository style is highly borrowed from [DifffusionDet](https://github.com/ShoufaChen/DiffusionDet). Thanks to Shoufa Chen.
