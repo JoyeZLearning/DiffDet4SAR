@@ -20,6 +20,15 @@ SAR-AIRcraft1.0 (doi: 10.12000/JR23043)
 
 The installation instruction and usage are in [Getting Started with DiffusionDet](GETTING_STARTED.md).
 
+## Train:
+1. modeifying the weight in DiffusionDet-main/configs/Base-DiffusionDet.yaml (use pre-train res50)
+2.  modeifying the weight in DiffusionDet-main/configs/diffdet.coco.res50.300boxes.yaml (can also ues pre-train res50, for at presen)
+
+## Quantative Results:
+Quantitative results of different models evaluated by AP@50. The model weights are available at  You can down load the model weights and put it to the checkpoints folder and modify the weight in DiffusionDet-main/configs/diffdet.coco.res50.300boxes.yaml
+
+
+*The overall repository style is highly borrowed from [DifffusionDet](https://github.com/ShoufaChen/DiffusionDet). Thanks to Shoufa Chen.
 
 ## License
 
