@@ -8,19 +8,19 @@
 > [**DiffDet4SAR: Diffusion-based Aircraft Target Detection Network for SAR Images**](https://arxiv.org/abs/2404.03595)               
 accepted by GRSL DOI: 10.1109/LGRS.2024.3386020
 
-## Updates
+## 🛠️ Updates
 - (04/2024) Code is released.
 
-## Dataset
+## 🕸️ Dataset
 SAR-AIRcraft1.0 (doi: 10.12000/JR23043)
 
 
 
-## Getting Started
+## 📽️ Getting Started
 
 The installation instruction and usage are in [Getting Started with DiffusionDet](GETTING_STARTED.md).
 
-🚉## Train/Evalution:
+## 🚉 Train/Evalution:
 1. modifying the weight in DiffusionDet-main/configs/Base-DiffusionDet.yaml (use pre-train res50)
 2.  modifying the weight in DiffusionDet-main/configs/diffdet.coco.res50.300boxes.yaml
 3.  modifying  DiffusionDet-main/detectron2/engine/defaults.py  and the 98-122 line to your root.
@@ -31,7 +31,7 @@ The installation instruction and usage are in [Getting Started with DiffusionDet
 
 
 
-🏝️## Quantative Results:
+## 🏝️ Quantative Results:
 Quantitative results of different models evaluated by AP@50. The model weights are available at
 
 link：https://pan.baidu.com/s/1V2Jw1tEePWrDQ-Wvf_SmIg?pwd=zzap 
@@ -47,7 +47,7 @@ You can down load the model weights and put it to the checkpoints folder and mod
 This project is under the CC-BY-NC 4.0 license. See [LICENSE](LICENSE) for details.
 
 
-💡## Citing DiffDet4SAR
+## 💡 Citing DiffDet4SAR
 
 If you find DiffDet4SAR helpful to your research or wish to refer to the baseline results published here, please use the following BibTeX entry.
 
@@ -64,5 +64,4 @@ If you find DiffDet4SAR helpful to your research or wish to refer to the baselin
   doi={10.1109/LGRS.2024.3386020}}
 
 ```
-Please light up the STAR![0B5C5DEE](https://github.com/JoyeZLearning/DiffDet4SAR/assets/164322321/261bf47e-3e85-4696-a6ef-a6096efcaa6b)
- to encourage more and more opensource on SAR image interpretations!🥰🥳🥂
+Please light up the STAR⭐⭐⭐⭐⭐  to encourage more and more opensource on SAR image interpretations!🥰🥳🥂
