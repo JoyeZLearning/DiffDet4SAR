@@ -32,12 +32,7 @@ The installation instruction and usage are in [Getting Started with DiffusionDet
 
 
 ## 🏝️ Quantative Results:
-Quantitative results of different models evaluated by AP@50. The model weights are available at
-
-link：https://pan.baidu.com/s/1V2Jw1tEePWrDQ-Wvf_SmIg?pwd=zzap 
-code：zzap
-
-You can down load the model weights and put it to the checkpoints folder and modify the weight in DiffusionDet-main/configs/diffdet.coco.res50.300boxes.yaml
+Quantitative results of different models evaluated by AP@50. 
 
 
 *The overall repository style is highly borrowed from [DifffusionDet](https://github.com/ShoufaChen/DiffusionDet). Thanks to Shoufa Chen.
