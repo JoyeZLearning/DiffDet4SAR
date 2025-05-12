@@ -43,7 +43,7 @@ This project is under the CC-BY-NC 4.0 license. See [LICENSE](LICENSE) for detai
 
 
 ## 🍭 GOOD NEW!!!
-DiffDet4SAR has entered the top 1% of ESI highly cited papers and obtained her life trophy on 05/08/2025 🎉🎉🎉
+DiffDet4SAR has entered the top 1% of ESI highly cited papers and obtained her life trophy on May, 08, 2025 🎉🎉🎉
 ![8ace4a5b0d061265d1f6c869093c0e0c](https://github.com/user-attachments/assets/2975bff2-8151-4042-a799-42cbef994ec2)
 
 
