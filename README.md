@@ -6,7 +6,7 @@
 
 
 > [**DiffDet4SAR: Diffusion-based Aircraft Target Detection Network for SAR Images**](https://arxiv.org/abs/2404.03595)               
-accepted by GRSL DOI: 10.1109/LGRS.2024.3386020
+published by GRSL DOI: 10.1109/LGRS.2024.3386020
 
 ## 🛠️ Updates
 - (04/2024) Code is released.
