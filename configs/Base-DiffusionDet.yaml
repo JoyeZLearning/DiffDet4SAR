@@ -48,7 +48,9 @@
 MODEL:
   META_ARCHITECTURE: "DiffusionDet"
 #  WEIGHTS: "/root/autodl-tmp/project/DiffusionDet-main/output/model_0009999.pth"
-  WEIGHTS: "/root/autodl-tmp/project/DiffusionDet-main/models/diffdet_coco_res50_300boxes.pth"
+#  WEIGHTS: "/root/autodl-tmp/project/DiffusionDet-main/models/diffdet_coco_res50_300boxes.pth"
+  # For training from scratch, use ImageNet pretrained ResNet-50 (auto-downloaded)
+  WEIGHTS: "detectron2://ImageNetPretrained/torchvision/R-50.pkl"
   PIXEL_MEAN: [23.7354,23.7354, 23.7354]
   PIXEL_STD: [27.256,27.256, 27.256]
   BACKBONE:

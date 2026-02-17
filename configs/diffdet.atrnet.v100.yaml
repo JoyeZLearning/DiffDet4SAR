@@ -1,0 +1,35 @@
+_BASE_: "Base-DiffusionDet.yaml"
+MODEL:
+  # Use ImageNet pretrained ResNet-50 (auto-downloaded)
+  WEIGHTS: "detectron2://ImageNetPretrained/torchvision/R-50.pkl"
+  RESNETS:
+    DEPTH: 50
+    STRIDE_IN_1X1: False
+  DiffusionDet:
+    NUM_PROPOSALS: 500  # Full 500 proposals - V100 32GB can handle it
+    NUM_CLASSES: 40     # ATRNet-STAR has 40 vehicle types
+DATASETS:
+  TRAIN: ("atrnet_star_train",)
+  TEST: ("atrnet_star_test",)
+SOLVER:
+  IMS_PER_BATCH: 8     # 8 images/batch for V100 32GB (4x local config)
+  BASE_LR: 0.00002     # Scaled with batch size (8/2 * 0.000005)
+  STEPS: (60000, 80000)
+  MAX_ITER: 90000
+  WARMUP_FACTOR: 0.001
+  WARMUP_ITERS: 1000
+  WEIGHT_DECAY: 0.0001
+  OPTIMIZER: "ADAMW"
+  CHECKPOINT_PERIOD: 5000
+INPUT:
+  MIN_SIZE_TRAIN: (800, 1000, 1200)  # Full-resolution multi-scale training
+  MIN_SIZE_TEST: 1000
+  CROP:
+    ENABLED: False
+  FORMAT: "RGB"
+TEST:
+  EVAL_PERIOD: 5000
+DATALOADER:
+  NUM_WORKERS: 4
+  FILTER_EMPTY_ANNOTATIONS: True
+OUTPUT_DIR: "./output_atrnet_star_pando"

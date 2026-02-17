@@ -108,7 +108,7 @@ Run on multiple machines:
         formatter_class=argparse.RawDescriptionHelpFormatter,
     )
     # parser.add_argument("--config-file", default=r"D:\softapp\Anaconda\envs\pytorch_gpu\DiffusionDet-main\configs\diffdet.coco.res50.300boxes.yaml", metavar="FILE", help="path to config file")
-    parser.add_argument("--config-file", default="/root/autodl-tmp/project/DiffusionDet-main/configs/diffdet.coco.res50.300boxes.yaml", metavar="FILE", help="path to config file")
+    parser.add_argument("--config-file", default="/media/alexandre/E6AE9051AE901BDD/PIE Code/ATR/ATR-Segmentation/DiffDet4SAR/configs/diffdet.coco.res50.300boxes.yaml", metavar="FILE", help="path to config file")
     parser.add_argument(
         "--resume",
         action="store_true",

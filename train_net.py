@@ -36,6 +36,9 @@ from diffusiondet import DiffusionDetDatasetMapper, add_diffusiondet_config, Dif
 from diffusiondet.util.model_ema import add_model_ema_configs, may_build_model_ema, may_get_ema_checkpointer, EMAHook, \
     apply_model_ema_and_restore, EMADetectionCheckpointer
 
+# Register ATRNet-STAR dataset
+import diffusiondet.register_atrnet
+
 
 class Trainer(DefaultTrainer):
     """ Extension of the Trainer class adapted to DiffusionDet. """
@@ -313,7 +316,7 @@ if __name__ == "__main__":
     torch.cuda.empty_cache()
     args = default_argument_parser().parse_args()
     print("Command Line Args:", args)
-    args.eval_only=True
+    # args.eval_only=True  # Disabled: Changed to enable training mode
     launch(
         main,
         args.num_gpus,

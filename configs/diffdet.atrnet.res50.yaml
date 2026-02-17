@@ -1,0 +1,35 @@
+_BASE_: "Base-DiffusionDet.yaml"
+MODEL:
+  # Use ImageNet pretrained ResNet-50 (auto-downloaded)
+  WEIGHTS: "detectron2://ImageNetPretrained/torchvision/R-50.pkl"
+  RESNETS:
+    DEPTH: 50
+    STRIDE_IN_1X1: False
+  DiffusionDet:
+    NUM_PROPOSALS: 300  # Reduced from 500 to save GPU memory
+    NUM_CLASSES: 40  # ATRNet-STAR has 40 vehicle types
+DATASETS:
+  TRAIN: ("atrnet_star_train",)
+  TEST: ("atrnet_star_test",)
+SOLVER:
+  IMS_PER_BATCH: 2  # Reduced from 4 to 2 for RTX 3070 Laptop (8GB VRAM)
+  BASE_LR: 0.000005  # Adjusted learning rate proportionally
+  STEPS: (60000, 80000)  # Decay at 60k and 80k iterations
+  MAX_ITER: 90000  # ~90k iterations for large dataset
+  WARMUP_FACTOR: 0.001
+  WARMUP_ITERS: 1000
+  WEIGHT_DECAY: 0.0001
+  OPTIMIZER: "ADAMW"
+  CHECKPOINT_PERIOD: 5000  # Save checkpoint every 5000 iterations
+INPUT:
+  MIN_SIZE_TRAIN: (640, 800)  # Reduced for memory efficiency
+  MIN_SIZE_TEST: 800
+  CROP:
+    ENABLED: False
+  FORMAT: "RGB"
+TEST:
+  EVAL_PERIOD: 5000  # Evaluate every 5000 iterations
+DATALOADER:
+  NUM_WORKERS: 2  # Reduced to save memory
+  FILTER_EMPTY_ANNOTATIONS: True
+OUTPUT_DIR: "./output_atrnet_star"

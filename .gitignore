@@ -1,47 +1,58 @@
-# output dir
-output_test
-output*
-instant_test_output
-inference_test_output
-
-
-*.json
-*.diff
-
-# compilation and distribution
-__pycache__
-_ext
-*.pyc
-*.pyd
+# Python
+__pycache__/
+*.py[cod]
+*$py.class
 *.so
-detectron2.egg-info/
-build/
+.Python
+*.egg-info/
 dist/
-wheels/
+build/
 
-# pytorch/python/numpy formats
-*.pth
-*.pkl
-*.npy
-
-# ipython/jupyter notebooks
+# Jupyter
+.ipynb_checkpoints/
 *.ipynb
-**/.ipynb_checkpoints/
 
-# Editor temporaries
-*.swn
-*.swo
+# Training outputs
+output_*/
+model_*.pth
+last_checkpoint
+checkpoint
+*.log
+events.out.tfevents.*
+metrics.json
+
+# Visualizations
+demo_visualizations/
+visualizations/
+visualizations_*/
+
+# Dataset (upload separately or download on PANDO)
+../ATRNet-STAR-data/
+
+# Local convenience scripts (not needed on PANDO)
+demo.py
+demo_visualization.py
+flatten_dataset.py
+test_dataset.py
+monitor_and_train.sh
+train_atrnet.sh
+
+# Git clones
+DL-Project/
+
+# IDE
+.vscode/
+.idea/
 *.swp
+*.swo
 *~
 
-# editor settings
-.idea
-.vscode
-_darcs
+# OS
+.DS_Store
+Thumbs.db
 
-# project dirs
-/detectron2/model_zoo/configs
-/datasets/*
-!/datasets/*.*
-/projects/*/datasets
-
+# Compressed files
+*.7z
+*.7z.*
+*.zip
+*.tar.gz
