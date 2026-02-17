@@ -54,8 +54,14 @@ fi
 python3 -c "
 from huggingface_hub import snapshot_download
 import os
+import sys
 
-token = os.environ.get('HF_TOKEN', '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')
+token = os.environ.get('HF_TOKEN')
+if not token:
+    print('⚠ HF_TOKEN not set. Set it with: export HF_TOKEN=your_token')
+    print('  Or login with: huggingface-cli login')
+    sys.exit(1)
+
 print('Downloading ATRNet-STAR-data...')
 snapshot_download(
     repo_id='ATRNet-STAR-data',

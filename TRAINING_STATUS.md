@@ -174,10 +174,10 @@ watch -n 1 nvidia-smi
 
 ## 🎓 About Your Hugging Face Token
 
-Your HF token "ATRNet" with value "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":
+Your HF token:
 - ✅ Already configured via `huggingface-cli login`
-- ⚠️ Can be used by anyone who has access to it
-- 🔒 Keep it private - don't share in public repos
+- ⚠️ Keep it private - never commit to git or share in public repos
+- 🔒 Use environment variable `HF_TOKEN` for scripts
 - 💡 Used to download datasets from private Hugging Face repositories
 - 🔄 Can be revoked and regenerated at: https://huggingface.co/settings/tokens
 
