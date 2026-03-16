@@ -64,6 +64,4 @@ If you find DiffDet4SAR helpful to your research or wish to refer to the baselin
   doi={10.1109/LGRS.2024.3386020}}
 
 ```
-Please light up the STAR⭐⭐⭐⭐⭐  to encourage more and more opensource on SAR image interpretations!
-
-🥰🥳🥂
+Please light up the STAR⭐⭐⭐⭐⭐  to encourage more opensource on SAR image interpretations! 🥰🥳🥂
